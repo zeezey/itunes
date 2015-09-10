@@ -26,9 +26,9 @@ app.controller('mainCtrl', function($scope, itunesService){
 
     $scope.getSongData = function (artist) {
         itunesService.getArtistData(artist).then(function (response){
-            $scope.songData = response
-        })
-    }
+            $scope.songData = response;  //returns promise from Service.
+        });
+    };
 
 
   //Now write a function that will call the method on the itunesService that is responsible for getting the data from iTunes, whenever the user clicks the submit button
